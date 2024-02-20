@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h3>Armstrong number 153,371</h3>
+<button onclick="armStrongNum()">Generate</button>
+<button onclick="findArmStong()">Find</button>
+<script>
+    function armStrongNum(){
+        for(i=1; i<10; ++i){
+            for(j=0; j<10; ++j){
+                for(k=0;k<10; ++k){
+                    var pow = (Math.pow(i,3) + Math.pow(j,3) + Math.pow(k,3));
+                    var p = (i * 100 + j * 10 +  k);
+                    if(pow === p){
+                        document.write(`<h2> ${p} is an armStrong number </h2>`);
+                    }
+                }
+            }
+        }
+    }
+
+    var sum =0;
+
+   
+    
+        
+        function findArmStrong(){
+            var a = prompt("Enter Number?");
+            var x = number(a);
+
+
+            var temp = x;
+
+            //while(temp > 0){
+                // var rem = temp % 10;
+               // console.log('rem = ',rem);
+               // sum + = rem * rem * rem;
+               // console.log('sum = ',sum);
+               //tem = perseInt(temp/10);
+               //console.log('tem=',temp);
+          //  }
+
+
+          //armStorng number of upto n length
+          while(temp > 0 ){
+               let rem = temp % 10;
+               sum += rem ** a.length;
+               temp = parseInt(temp / 10); 
+          }
+
+          if(sum == x){
+            document.write(`<h2> ${ x } === ${sum} is an armStrong number </h2>`);
+          }
+          else{
+            document.write(`<h2> ${ x } === ${sum} is not an armStrong number </h2>`);
+
+          
+        }
+    }
+</script>
+</body>
+</html>

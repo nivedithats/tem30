@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Non-Parameter return type(from)</h1>
+    <form autoComplete="off"  method="post" onsubmit="userDate(event)">
+        <div>
+            <label for="name">Enter name</label>
+            <input type="text" name="name" id="name" required>
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required>
+        </div>
+        <div>
+            <input type="submit" value="Send">
+        </div>
+    </form>
+    <hr>
+
+    <section id="result">
+        <script>
+            var fname = document.getElementById('name');
+            var femail = document.getElementById('email');
+
+
+           // function userData(event){
+                //event.preventDefult();//avoid page refresh
+
+                //console.log('name is =',fname.value);
+                //alert('email is ='+ femail.value);
+                document.getElementById('result').innerHTML = `<h1> name = ${fname.value},email = ${fmail.value </h1>}`;
+            }
+        </script>
+    </section>
+
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Switch case</h1>
+    <button onclick="display()">click me</button>
+    <script>
+        function display(){ 
+            var day = prompt("Enter day number");
+            var key = number(day); //converting string to number
+
+            switch(key){
+                case 1: 
+                document.write(`<h1>Sunday</h1>`);
+                break;
+                case 2:
+                document.write(`<h1>Monday</h1>`);
+                break;
+                 
+                deafult: document.write(`<h1>Check your input</h1>`);
+                break;
+
+            }
+        }
+    </script>
+</body>
+</html>

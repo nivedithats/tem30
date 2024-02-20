@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Non Parameter and non return functions</h3>
+    <button onclick="userInfo()">Click me</button>
+    <script>
+        function userInfo(){
+            var name = prompt("Enter your name?");
+            var email = prompt("Enter your email?");
+
+            document.write(`<h1> My Name is ${name} </h1>`);
+            document.write("<h3> My email is" +  email + "</h3>");
+
+        }
+    </script>
+</body>
+</html>

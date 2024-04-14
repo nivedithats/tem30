@@ -1,0 +1,101 @@
+Here's a simple HTML form along with JavaScript to perform the required validations and display the results:
+
+html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Registration Form</title>
+<style>
+    .error {
+        border: 1px solid red;
+    }
+</style>
+</head>
+<body>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username">
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+    </div>
+    <div>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword">
+    </div>
+    <div>
+        <label for="course">Course:</label>
+        <select id="course" name="course">
+            <option value="">Select Course</option>
+            <option value="course1">Course 1</option>
+            <option value="course2">Course 2</option>
+            <option value="course3">Course 3</option>
+        </select>
+    </div>
+    <div>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+    <div>
+        <button type="button" onclick="validateForm()">Submit</button>
+    </div>
+</form>
+
+<div id="result"></div>
+
+<script>
+    function validateForm() {
+        let username = document.getElementById('username').value;
+        let email = document.getElementById('email').value;
+        let password = document.getElementById('password').value;
+        let confirmPassword = document.getElementById('confirmPassword').value;
+        let course = document.getElementById('course').value;
+        let gender = document.querySelector('input[name="gender"]:checked');
+
+        let isValid = true;
+
+        if (!username) {
+            document.getElementById('username').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('username').classList.remove('error');
+        }
+
+        if (password !== confirmPassword) {
+            document.getElementById('password').classList.add('error');
+            document.getElementById('confirmPassword').classList.add('error');
+            isValid = false;
+        } else {
+            document.getElementById('password').classList.remove('error');
+            document.getElementById('confirmPassword').classList.remove('error');
+        }
+
+        if (isValid) {
+            let result = `Username: ${username}<br>Email: ${email}<br>Course: ${course}<br>Gender: ${gender.value}`;
+            document.getElementById('result').innerHTML = result;
+            // Here you can send the form data to your backend to save it in the table
+        } else {
+            document.getElementById('result').innerHTML = '<span style="color:red;">Please fill in all required fields correctly.</span>';
+        }
+    }
+</script>
+
+</body>
+</html>
+
+
+This code will create a registration form with the specified fields and perform validations as requested. If all fields are entered correctly, it will display the form data. Otherwise, it will display an error message.

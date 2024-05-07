@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Generator function</h3>
+
+
+    <script>
+       // function* users(){
+         //   yield "Raju"
+           // yield "mahesh"
+            //yield "Ranjitha"
+           // yield "sonu"
+           // yield "mahesh"
+
+       // }
+        //console.log('user()',users());
+
+
+        //for(let item of users()){
+          //  document.write(`<h1>${item}</h1>`)
+
+        //}
+
+
+        function* course(){
+            yield "java"
+            yield "python"
+            yield "cloud"
+            yield "dataScience"
+
+        }
+        console.log('course()',course());
+
+        for(let item of course()){
+            document.write(`<h1>${item}</h1>`)
+        }
+    </script>
+</body>
+</html>

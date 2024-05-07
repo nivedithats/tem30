@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+    <SCRipt>
+        let email = new Set();
+
+
+
+        email.add("manu@email.com");
+        email.add("thanu@email.com");
+        email.add("raju@email.com");
+        email.add("ravi@email.com");
+        email.add("dharshan@email.com");
+      
+        console.log('Set =',email.entries());
+
+        email.forEach(function(item){
+            document.write(`<h1>${item}</h1>`)
+        })
+        
+        console.log("has('manu@gmail.com') =",emp.has('manu@gmail.com'));//true
+        console.log('tanu@gmail.com =',emp.has ('tanu@gmail.com'));//false
+
+
+        emp.delete("manu@gmail.com");//delete set
+
+
+        console.log('after delete =',emp.entries());
+        console.log("has('manu@gmail.com') = ",emp.has('manu'))
+
+    </SCRipt>
+</body>
+</html>
